@@ -12,6 +12,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
+    options: '-Dmaven.repo.local=$(System.DefaultWorkingDirectory)'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
